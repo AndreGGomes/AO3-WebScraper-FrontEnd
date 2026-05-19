@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+@font-face{
+    font-family: 'lucida-sans';
+    src: url('./assets/lucida-sans/l_10646.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face{
+    font-family: 'georgia-regular';
+    src: url('./assets/georgia-2/georgia.ttf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'georgia-bold';
+    src: url(./assets/georgia-2/georgiab.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+
+@theme{
+    --font-lucida: 'lucida-sans', sans-serif;
+    --font-georgia: 'georgia-regular', sans-serif;
+    --font-georgia-bold: 'georgia-bold', sans-serif;
+}
+
+/* Estilização da barra de rolagem (Chrome, Edge, Safari) */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 8px; /* Para scroll horizontal, se precisar */
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background-color: #2D2B2B;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: #970000;
+  border-radius: 9999px; /* rounded-full */
+}
+
+/* Estilização da barra de rolagem (Firefox) */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #970000 #2D2B2B;
+}
