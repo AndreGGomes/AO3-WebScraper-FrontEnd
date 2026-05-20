@@ -38,7 +38,7 @@ this react frontend application.
 
 The UI follow the design choices of the original [Archive of Our Own webpage](https://archiveofourown.org/).
 
-![UI implementation](https://github.com/AndreGGomes/AO3-WebScraper-API/blob/main/image.png)
+![UI implementation](https://github.com/AndreGGomes/AO3-WebScraper-FrontEnd/blob/main/image.png)
 
 ## Upcomming Features
 
