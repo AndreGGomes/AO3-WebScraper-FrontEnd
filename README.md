@@ -1,73 +1,45 @@
-# React + TypeScript + Vite
+# AO3-WebScraper-FrontEnd
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An implementation of a frontend UI for the project [AO3 Unnoficial API](https://github.com/AndreGGomes/AO3-WebScraper-API) made by myself.
 
-Currently, two official plugins are available:
+Currently, the frontend UI supports searching an AO3's work data by its **Work ID**, that can be visualized raw or in **JSON** format.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+> **Disclaimer:** This project is not affiliated with or endorsed by OTW or AO3. It is intended for educational and personal use. Please be mindful of AO3's Terms of Service and avoid aggressive scraping that could strain their servers.
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Features
+- **Work Metadata Extraction:** Get title, author, rating, tags, fandoms, and statistics.
+- **JSON Output:** Visualize clean and structured data in **JSON** format.
+- **raw Output:** Visualize raw data as an single string of characters.
+- **Copy to Clipboard:** Copy the data extracted to the clipboard
 
-## Expanding the ESLint configuration
+## Tech Stack
+- **React**
+- **Vite**
+- **TailwindCSS**
+- **npm** (Dependency Management)
+- **docker** (conteinarization)
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Instalation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+Clone the repo with `git clone git@github.com:AndreGGomes/AO3-WebScraper-FrontEnd.git`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+With docker && docker compose installed run `docker compose up -d --build`
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## API Usage
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+If u want to use the [AO3 Unnoficial API](https://github.com/AndreGGomes/AO3-WebScraper-API) with an front end UI, run the backend spring application first (instructions on the API GitHub repository) and than run 
+this react frontend application.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## UI Preview
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+The UI follow the design choices of the original [Archive of Our Own webpage](https://archiveofourown.org/).
+
+![UI implementation](https://github.com/AndreGGomes/AO3-WebScraper-API/blob/main/image.png)
+
+## Upcomming Features
+
+- **UI improvement:** Loading icon for the API reponse waiting time
+- **About Section:** Section that explains the usage of the API
+- **Search by author**: Search all the works an author has 
