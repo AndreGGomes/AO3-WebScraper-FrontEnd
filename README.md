@@ -29,10 +29,9 @@ With docker && docker compose installed run `docker compose up --build`
 
 Now open in your browser the link to the now exposed frontend `http://localhost:5173/`
 
-## API Usage
+## Usage
 
-If u want to use the [AO3 Unnoficial API](https://github.com/AndreGGomes/AO3-WebScraper-API) with an front end UI, run the backend spring application first (instructions on the API GitHub repository) and than run 
-this react frontend application.
+Follow the instructions in [AO3 Unnoficial API](https://github.com/AndreGGomes/AO3-WebScraper-API) to run the backend application and then follow the instalation steps described above.
 
 ## UI Preview
 
