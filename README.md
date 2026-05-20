@@ -25,7 +25,9 @@ Currently, the frontend UI supports searching an AO3's work data by its **Work I
 
 Clone the repo with `git clone git@github.com:AndreGGomes/AO3-WebScraper-FrontEnd.git`
 
-With docker && docker compose installed run `docker compose up -d --build`
+With docker && docker compose installed run `docker compose up --build`
+
+Now open in your browser the link to the now exposed frontend `http://localhost:5173/`
 
 ## API Usage
 
